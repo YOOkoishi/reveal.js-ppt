@@ -1,0 +1,11 @@
+[
+  { "id": "ivory", "name": "暖纸", "english": "Ivory", "description": "米白纸面与陶土色，适合日常分享与课程汇报", "group": "light", "colors": ["#f7f2e8", "#332d27", "#956044"] },
+  { "id": "editorial", "name": "书页", "english": "Editorial", "description": "衬线标题与细线留白，适合读书、研究与人文主题", "group": "light", "colors": ["#faf7f0", "#302f2a", "#57564c"] },
+  { "id": "mist", "name": "雾蓝", "english": "Mist", "description": "清爽浅蓝与规整线条，适合技术讲解与项目汇报", "group": "light", "colors": ["#f4f7fb", "#23354c", "#3e689a"] },
+  { "id": "sage", "name": "鼠尾草", "english": "Sage", "description": "灰绿植物色与柔和曲线，适合轻松交流与工作坊", "group": "light", "colors": ["#f2f4eb", "#303d31", "#576f4b"] },
+  { "id": "rose", "name": "淡玫瑰", "english": "Rose", "description": "低饱和粉色与简洁几何，适合设计与创意分享", "group": "light", "colors": ["#fcf4f2", "#503a3b", "#9a5868"] },
+  { "id": "material", "name": "柔紫", "english": "Material", "description": "Material Design 启发的柔紫色、圆角与层次", "group": "light", "colors": ["#f8f5ff", "#292333", "#6950a1"] },
+  { "id": "paper", "name": "纸白", "english": "Paper", "description": "原有纸白与深绿配色，保留线框封面的技术感", "group": "light", "colors": ["#f6f5ef", "#202a25", "#356145"] },
+  { "id": "noir", "name": "暗夜", "english": "Noir", "description": "黑底荧光绿，适合强对比的大屏演示", "group": "dark", "colors": ["#181c18", "#f1f3e9", "#c5f36b"] },
+  { "id": "ember", "name": "余烬", "english": "Ember", "description": "深棕与暖橙，适合深色环境里的叙事演讲", "group": "dark", "colors": ["#211815", "#f9eee5", "#ffa06e"] }
+]

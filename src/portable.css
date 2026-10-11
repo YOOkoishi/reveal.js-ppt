@@ -1,0 +1,8 @@
+.portable-tools { position: fixed; top: 14px; right: 18px; z-index: 30; display: flex; gap: 7px; opacity: 0; pointer-events: none; transition: opacity .2s; }
+.show-portable-tools .portable-tools, .portable-tools:hover, .portable-tools:focus-within { opacity: 1; pointer-events: auto; }
+.portable-tools button { display: flex; align-items: center; gap: 7px; padding: 8px 11px; background: var(--bg); color: var(--muted); border: 1px solid var(--line); border-radius: 5px; font-size: 11px; }
+.portable-tools button:hover { color: var(--accent); border-color: var(--accent); }
+.portable-help-note { color: var(--muted); font-size: 13px; line-height: 1.8; margin: 26px 0 0; }
+.portable.print-mode .portable-tools { display: none; }
+.portable .reveal .slide-number { background: transparent; color: var(--muted); }
+@media print { .portable-tools { display: none !important; } }

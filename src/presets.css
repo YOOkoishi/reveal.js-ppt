@@ -1,0 +1,218 @@
+/* Softer presentation presets. Load after styles.css; the authoring canvas stays 1440 × 810. */
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) {
+  color-scheme: light;
+  --preset-heading-font: var(--r-main-font);
+  --preset-heading-weight: 630;
+  --preset-cover-size: 92px;
+  --preset-radius: 10px;
+  --r-heading-font: var(--preset-heading-font);
+  --code-bg: #24272a;
+}
+
+:root[data-theme='ivory'] {
+  --app-bg: #eae4d9; --bg: #f7f2e8; --surface: #eee5d7; --fg: #332d27;
+  --muted: #75685b; --subtle: #6d5f50; --accent: #956044; --accent-ink: #fffaf3;
+  --line: #d9cfbf; --shadow: 0 20px 65px #5d473013; --chapter-bg: #eee4d4;
+  --preset-heading-weight: 600; --preset-cover-size: 92px; --preset-radius: 8px;
+}
+:root[data-theme='editorial'] {
+  --app-bg: #eae8e2; --bg: #faf7f0; --surface: #ede9df; --fg: #302f2a;
+  --muted: #69685e; --subtle: #68675d; --accent: #57564c; --accent-ink: #fffdf7;
+  --line: #ccc9be; --shadow: 0 20px 65px #37352c10; --chapter-bg: #eeebe2;
+  --preset-heading-font: 'Noto Serif CJK SC', 'Source Han Serif SC', 'Songti SC', 'STSong', 'SimSun', Georgia, serif;
+  --preset-heading-weight: 600; --preset-cover-size: 88px; --preset-radius: 0px;
+}
+:root[data-theme='mist'] {
+  --app-bg: #e5ebf2; --bg: #f4f7fb; --surface: #e5edf6; --fg: #23354c;
+  --muted: #586e85; --subtle: #516b83; --accent: #3e689a; --accent-ink: #ffffff;
+  --line: #cbd7e5; --shadow: 0 20px 65px #2d476216; --chapter-bg: #e5edf6;
+  --preset-heading-weight: 660; --preset-cover-size: 90px; --preset-radius: 4px;
+}
+:root[data-theme='sage'] {
+  --app-bg: #e4e9dc; --bg: #f2f4eb; --surface: #e5eadb; --fg: #303d31;
+  --muted: #62715c; --subtle: #5d6c51; --accent: #576f4b; --accent-ink: #fcfff7;
+  --line: #cdd6c0; --shadow: 0 20px 65px #35452d12; --chapter-bg: #e7ecdf;
+  --preset-heading-weight: 560; --preset-cover-size: 90px; --preset-radius: 18px;
+}
+:root[data-theme='rose'] {
+  --app-bg: #f0e5e2; --bg: #fcf4f2; --surface: #f2e4e3; --fg: #503a3b;
+  --muted: #80686a; --subtle: #7b6267; --accent: #9a5868; --accent-ink: #fff8f8;
+  --line: #e2cccf; --shadow: 0 20px 65px #73414d10; --chapter-bg: #f2e3e4;
+  --preset-heading-weight: 590; --preset-cover-size: 90px; --preset-radius: 14px;
+}
+:root[data-theme='material'] {
+  --app-bg: #ece6f5; --bg: #f8f5ff; --surface: #eae2f4; --fg: #292333;
+  --muted: #6a6076; --subtle: #685b78; --accent: #6950a1; --accent-ink: #ffffff;
+  --line: #d8cde7; --shadow: 0 10px 35px #39265013; --chapter-bg: #e9e1f4;
+  --preset-heading-weight: 640; --preset-cover-size: 88px; --preset-radius: 24px;
+}
+
+/* Shared restraint: readable type, lighter hierarchy, and no technical grid behind the artwork. */
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal {
+  font-weight: 400;
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal :is(h1, h2, h3) {
+  font-family: var(--preset-heading-font);
+  font-weight: var(--preset-heading-weight);
+  letter-spacing: -.035em;
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal h2 {
+  font-size: 62px;
+  line-height: 1.25;
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal .cover h1 {
+  font-size: var(--preset-cover-size);
+  line-height: 1.28;
+  letter-spacing: -.045em;
+  margin-top: 44px;
+  margin-bottom: 34px;
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal .cover .muted {
+  font-size: 26px;
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal .cover-meta {
+  letter-spacing: .01em;
+  margin-top: 48px;
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal .orbital-art {
+  width: 560px;
+  height: 560px;
+  right: 48px;
+  top: 127px;
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal .orbital-art::before {
+  display: none;
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal .statement {
+  font-weight: 500;
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal .eyebrow {
+  font-size: 14px;
+  letter-spacing: .13em;
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal :is(pre, .flow-box) {
+  border-radius: var(--preset-radius);
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal .chapter {
+  background: var(--chapter-bg);
+  color: var(--fg);
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal .chapter h2 {
+  color: var(--fg);
+  font-size: 100px;
+  line-height: 1.25;
+  margin-top: 116px;
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal .chapter p {
+  color: var(--fg);
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal .chapter .eyebrow {
+  color: var(--accent);
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal .chapter-number {
+  color: var(--accent);
+  font-size: 400px;
+  line-height: 1.15;
+  top: 155px;
+  right: 102px;
+  letter-spacing: -.1em;
+  opacity: .1;
+}
+:root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal .closing h2 {
+  font-size: 96px;
+  line-height: 1.3;
+  margin-top: 80px;
+}
+
+/* Ivory: warm paper, a narrow binding rule, and a modest underline. */
+:root[data-theme='ivory'] .reveal .cover h1 em {
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 14px;
+}
+:root[data-theme='ivory'] .reveal .chapter::before {
+  content: '';
+  position: absolute;
+  top: 76px;
+  bottom: 64px;
+  right: 570px;
+  width: 1px;
+  background: var(--line);
+}
+:root[data-theme='ivory'] .reveal .agenda-row { padding-block: 27px; }
+:root[data-theme='ivory'] .reveal .pipeline-node { border-top: 0; border-bottom-width: 2px; }
+:root[data-theme='ivory'] .reveal .pipeline-node::before { top: auto; bottom: -2px; height: 2px; }
+:root[data-theme='ivory'] .reveal .callout { border-left-width: 2px; border-radius: 0 8px 8px 0; }
+
+/* Editorial: book typography, flat rules, and an open-page rhythm. */
+:root[data-theme='editorial'] .reveal .cover h1 { letter-spacing: -.015em; line-height: 1.32; }
+:root[data-theme='editorial'] .reveal .cover h1 em { color: var(--fg); }
+:root[data-theme='editorial'] .reveal .eyebrow { color: var(--muted); letter-spacing: .2em; }
+:root[data-theme='editorial'] .reveal .agenda { border-top: 2px solid var(--fg); }
+:root[data-theme='editorial'] .reveal .agenda-row:first-child { border-top: 0; }
+:root[data-theme='editorial'] .reveal .agenda-title { font-family: var(--preset-heading-font); font-size: 36px; }
+:root[data-theme='editorial'] .reveal :is(.statement, .pipeline-node strong) { font-family: var(--preset-heading-font); }
+:root[data-theme='editorial'] .reveal .chapter h2 { font-size: 98px; }
+:root[data-theme='editorial'] .reveal .chapter-number { font-family: Georgia, 'Noto Serif CJK SC', serif; font-style: italic; font-size: 350px; top: 190px; }
+:root[data-theme='editorial'] .reveal .equation { border-top: 2px solid var(--fg); color: var(--fg); }
+:root[data-theme='editorial'] .reveal .pipeline-node::before { display: none; }
+:root[data-theme='editorial'] .reveal .pipeline-node { border-top-color: var(--fg); padding-inline: 15px; }
+:root[data-theme='editorial'] .reveal .metric-value { font-family: Georgia, serif; letter-spacing: -.06em; }
+:root[data-theme='editorial'] .reveal .demo-label { border-radius: 0; padding-inline: 0; border-width: 0 0 1px; }
+:root[data-theme='editorial'] .reveal .callout { background: transparent; border-left-width: 1px; padding-left: 28px; }
+
+/* Mist: precise course notes, outlined chapter numbering, and squared technical diagrams. */
+:root[data-theme='mist'] .reveal .eyebrow { display: flex; align-items: center; gap: 14px; }
+:root[data-theme='mist'] .reveal .eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--accent); }
+:root[data-theme='mist'] .reveal .chapter-number { color: transparent; -webkit-text-stroke: 1px var(--accent); opacity: .4; }
+:root[data-theme='mist'] .reveal .equation { background: color-mix(in srgb, var(--surface) 50%, transparent); border-color: var(--line); }
+:root[data-theme='mist'] .reveal .pipeline-node { border: 1px solid var(--line); padding: 30px 25px; }
+:root[data-theme='mist'] .reveal .pipeline-node::before { height: 2px; }
+:root[data-theme='mist'] .reveal .flow-box { border-top-width: 3px; }
+:root[data-theme='mist'] .reveal .bar-track { height: 21px; }
+
+/* Sage: lighter text, curved accents, and a quiet botanical palette. */
+:root[data-theme='sage'] .reveal .cover h1 { line-height: 1.32; }
+:root[data-theme='sage'] .reveal .cover h1 em { font-weight: 560; }
+:root[data-theme='sage'] .reveal .agenda-title { font-weight: 450; }
+:root[data-theme='sage'] .reveal .chapter-number { font-weight: 350; opacity: .13; }
+:root[data-theme='sage'] .reveal .pipeline-node { border-top: 0; padding-top: 24px; }
+:root[data-theme='sage'] .reveal .pipeline-node::before { width: 12px; height: 12px; border-radius: 9px 2px 9px 2px; }
+:root[data-theme='sage'] .reveal .equation { border-top: 0; border-bottom: 1px solid var(--line); }
+:root[data-theme='sage'] .reveal :is(.bar-track, .bar) { border-radius: 20px; }
+:root[data-theme='sage'] .reveal .callout { border: 0; border-radius: 4px 22px 22px 22px; }
+
+/* Rose: understated emphasis and generous, rounded color fields. */
+:root[data-theme='rose'] .reveal .cover h1 em { text-decoration: underline; text-decoration-color: var(--line); text-decoration-thickness: 7px; text-underline-offset: 12px; }
+:root[data-theme='rose'] .reveal .chapter-number { font-weight: 450; opacity: .1; }
+:root[data-theme='rose'] .reveal .agenda-index { font-family: inherit; font-size: 23px; }
+:root[data-theme='rose'] .reveal .pipeline-node { border-top: 0; border-bottom: 1px solid var(--line); }
+:root[data-theme='rose'] .reveal .pipeline-node::before { width: 35px; height: 4px; border-radius: 3px; }
+:root[data-theme='rose'] .reveal .equation { border: 0; border-left: 2px solid var(--accent); background: var(--surface); border-radius: 0 18px 18px 0; }
+:root[data-theme='rose'] .reveal :is(.bar-track, .bar) { border-radius: 4px; }
+:root[data-theme='rose'] .reveal .callout { border-left-width: 2px; border-radius: 0 14px 14px 0; }
+
+/* Material: a tonal surface system and soft geometry, inspired by Material Design. */
+:root[data-theme='material'] .reveal .cover h1 { line-height: 1.32; letter-spacing: -.04em; }
+:root[data-theme='material'] .reveal .eyebrow { letter-spacing: .1em; }
+:root[data-theme='material'] .reveal .chapter-number { font-weight: 650; opacity: .13; }
+:root[data-theme='material'] .reveal .agenda-index { display: grid; place-items: center; width: 46px; height: 46px; background: var(--surface); border-radius: 50%; font: 18px var(--r-main-font); }
+:root[data-theme='material'] .reveal .equation { border: 0; border-radius: 26px; background: var(--surface); }
+:root[data-theme='material'] .reveal .pipeline-node { border: 0; border-radius: 24px; background: var(--surface); padding: 32px 25px; }
+:root[data-theme='material'] .reveal .pipeline-node::before { display: none; }
+:root[data-theme='material'] .reveal .flow-box { background: color-mix(in srgb, var(--surface) 35%, transparent); border-color: transparent; }
+:root[data-theme='material'] .reveal :is(.bar-track, .bar) { border-radius: 24px; }
+:root[data-theme='material'] .reveal .callout { border: 0; border-radius: 22px; }
+
+/* The animation example uses this class instead of a fixed lime rgba value. */
+:root .reveal .flow-box.flow-focus {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 9%, var(--bg));
+}
+
+@media print {
+  :root:is([data-theme='ivory'], [data-theme='editorial'], [data-theme='mist'], [data-theme='sage'], [data-theme='rose'], [data-theme='material']) .reveal .slides section.chapter {
+    background: var(--chapter-bg) !important;
+  }
+}
